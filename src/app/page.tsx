@@ -1,6 +1,6 @@
-import { Header } from "./components/Header";
-import { EmptyState } from "./components/EmptyState";
-import { Spinner } from "./components/Spinner";
+import { EmptyState } from "@/components/EmptyState";
+import { Header } from "@/components/Header";
+import { Spinner } from "@/components/Spinner";
 
 export default function Main() {
   return (
