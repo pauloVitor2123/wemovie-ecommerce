@@ -1,4 +1,3 @@
-// components/MovieCard.js
 import Image from "next/image";
 import React from "react";
 import { BasicButton } from "./BasicButton";

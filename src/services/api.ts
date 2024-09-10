@@ -23,3 +23,5 @@ const fetchMoviesList = async (): Promise<MoviesResponse> => {
 export const api = {
   fetchMoviesList,
 };
+
+export type Api = typeof api;

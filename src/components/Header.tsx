@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Header: React.FC = () => {
   return (
-    <header className="flex justify-between items-center bg-primary p-4">
+    <header className="flex justify-between items-center bg-primary p-4 px-9">
       <b className="text-white text-xl font-bold cursor-pointer">WeMovies</b>
       <div className="flex items-center cursor-pointer">
         <div className="mr-4 text-white text-end">
