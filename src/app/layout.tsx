@@ -13,6 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
+      <head>
+        <title>Teste Front React WeFit</title>
+      </head>
       <body className={`font-sans antialiased`}>{children}</body>
     </html>
   );
