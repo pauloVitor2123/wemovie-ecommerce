@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { BasicButton } from "./BasicButton";
+import { useCart } from "@/hooks/useCart";
 
 export type Movie = {
   id: number;
@@ -14,6 +15,18 @@ type MovieCardProps = {
 };
 
 const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
+  const { addToCart, isInCart, updateQuantity, cartItems } = useCart();
+
+  const handleAddToCart = () => {
+    if (isInCart(movie.id)) {
+      const item = cartItems.find((m) => m.id === movie.id);
+      const quantityUpdated = item ? item?.quantity + 1 : 1;
+      updateQuantity(movie.id, quantityUpdated);
+    } else {
+      addToCart({ ...movie, quantity: 1 });
+    }
+  };
+
   return (
     <div className="bg-white shadow-md rounded-lg overflow-hidden max-w-xs p-4">
       <Image
@@ -32,7 +45,10 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
           })}
         </b>
       </div>
-      <BasicButton />
+      <BasicButton
+        onClick={handleAddToCart}
+        quantity={cartItems.find((m) => m.id === movie.id)?.quantity}
+      />
     </div>
   );
 };
