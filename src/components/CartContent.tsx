@@ -1,12 +1,9 @@
 import { FunctionComponent } from "react";
 import { useCart } from "@/hooks/useCart";
 import { EmptyState } from "@/components/EmptyState";
-import Image from "next/image";
-import { FaTrash } from "react-icons/fa";
-import { formatCurrencyBRL } from "@/utils/utils";
-import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
-import { InputNumber } from "./quantityInput/InputNumber";
 import CartSummary from "./CartSummary";
+import { CartCard } from "./CartCard";
+import { CartCardMobile } from "./CartCardMobile";
 
 export const CartContent: FunctionComponent = () => {
   const { cartItems, removeFromCart, updateQuantity } = useCart();
@@ -41,57 +38,30 @@ export const CartContent: FunctionComponent = () => {
       </div>
 
       {cartItems.map((item, index) => (
-        <div
-          key={item.id}
-          className={`grid grid-cols-5 gap-4 py-4 ${
-            index === cartItems.length - 1 ? "border-b" : ""
-          }`}
-        >
-          <div className="flex items-center space-x-4 col-span-2">
-            <Image
-              width={147}
-              height={188}
-              src={item.image}
-              alt={item.title}
-              className="w-36 h-48 object-contain"
-            />
-            <div className="flex flex-col">
-              <b className="text-lg mb-2">{item.title}</b>
-              <b className="text-sm text-gray-600">
-                {formatCurrencyBRL(item.price)}
-              </b>
-            </div>
-          </div>
-          <div className="flex items-center space-x-2 col-span-1 justify-center">
-            <AiOutlineMinusCircle
-              size={18}
-              onClick={() => handleDecrease(item.id, item.quantity)}
-              className="text-button-background-blue cursor-pointer"
-            />
-            <InputNumber
+        <>
+          <div className="hidden md:block">
+            <CartCard
+              key={item.id}
               item={item}
+              isLastCart={index === cartItems.length - 1}
+              handleDecrease={handleDecrease}
               handleQuantityChange={handleQuantityChange}
-            />
-            <AiOutlinePlusCircle
-              size={18}
-              onClick={() => updateQuantity(item.id, item.quantity + 1)}
-              className="text-button-background-blue cursor-pointer"
+              updateQuantity={updateQuantity}
+              removeFromCart={removeFromCart}
             />
           </div>
-          <div className="flex items-center justify-center col-span-1">
-            <b className="text-lg">
-              {formatCurrencyBRL(item.price * item.quantity)}
-            </b>
+          <div className="md:hidden">
+            <CartCardMobile
+              key={item.id}
+              item={item}
+              isLastCart={index === cartItems.length - 1}
+              handleDecrease={handleDecrease}
+              handleQuantityChange={handleQuantityChange}
+              updateQuantity={updateQuantity}
+              removeFromCart={removeFromCart}
+            />
           </div>
-          <div className="flex items-center justify-end col-span-1">
-            <button
-              onClick={() => removeFromCart(item.id)}
-              className="text-button-background-blue"
-            >
-              <FaTrash size={18} />
-            </button>
-          </div>
-        </div>
+        </>
       ))}
 
       <CartSummary cartItems={cartItems} />
