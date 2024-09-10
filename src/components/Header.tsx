@@ -1,12 +1,26 @@
 import { useCart } from "@/hooks/useCart";
 import Image from "next/image";
 
-export const Header: React.FC = () => {
+type HeaderProps = {
+  goToMovieList: () => void;
+  goToCart: () => void;
+};
+
+export const Header: React.FC<HeaderProps> = ({
+  goToCart,
+  goToMovieList,
+}: HeaderProps) => {
   const { cartItems } = useCart();
+
   return (
     <header className="flex justify-between items-center bg-primary p-4 px-9">
-      <b className="text-white text-xl font-bold cursor-pointer">WeMovies</b>
-      <div className="flex items-center cursor-pointer">
+      <b
+        className="text-white text-xl font-bold cursor-pointer"
+        onClick={goToMovieList}
+      >
+        WeMovies
+      </b>
+      <div className="flex items-center cursor-pointer" onClick={goToCart}>
         <div className="mr-4 text-white text-end">
           <div className="text-sm font-bold hidden md:block">Meu Carrinho</div>
           <div className="text-xs text-primary-light">
