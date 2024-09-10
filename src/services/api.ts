@@ -6,15 +6,15 @@ const BASE_URL = "https://wefit-movies.vercel.app/api";
 const fetchMoviesList = async (): Promise<MoviesResponse> => {
   try {
     const response = await fetch(`${BASE_URL}/movies`);
-
+    const data = await response.json();
     if (!response.ok) {
       throw new ApiError(
         `Erro ao carregar filmes: ${response.statusText}`,
         response.status
       );
     }
-
-    return response.json();
+    console.log(data);
+    return { movies: data.products };
   } catch (error) {
     throw error;
   }
