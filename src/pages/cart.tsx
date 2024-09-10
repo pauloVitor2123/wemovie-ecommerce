@@ -1,3 +1,9 @@
+import { CartContent } from "@/components/CartContent";
+
 export const Cart = () => {
-  return <p>Carrinho</p>;
+  return (
+    <div className="p-8">
+      <CartContent />
+    </div>
+  );
 };
