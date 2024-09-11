@@ -1,11 +1,10 @@
 "use client";
 import { useState } from "react";
 import { Header } from "@/components/Header";
-import { CartProvider } from "@/contexts/CartContext";
 import Cart from "@/pages/cart";
 import Store from "@/pages/store";
 
-function MainComponent() {
+const Main = () => {
   const [isStorePage, setIsStorePage] = useState(true);
 
   return (
@@ -19,12 +18,5 @@ function MainComponent() {
       </div>
     </div>
   );
-}
-
-export default function Main() {
-  return (
-    <CartProvider>
-      <MainComponent />
-    </CartProvider>
-  );
-}
+};
+export default Main;

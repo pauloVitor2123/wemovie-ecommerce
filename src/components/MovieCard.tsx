@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { useCart } from "@/hooks/useCart";
 import { CartButton } from "./CartButton";
+import { useCart } from "@/hooks/useCart";
 
 export type Movie = {
   id: number;

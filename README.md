@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Aqui está um exemplo de arquivo `README.md` para o seu projeto "WeMovie E-Commerce":
 
-## Getting Started
+---
 
-First, run the development server:
+# WeMovie E-Commerce
+
+## Descrição
+
+O WeMovie E-Commerce é uma plataforma de e-commerce desenvolvida para a venda de produtos relacionados a filmes. O projeto é construído utilizando Next.js e React, com foco em uma interface moderna e responsiva para uma melhor experiência de usuário.
+
+## Objetivo
+
+O objetivo do WeMovie E-Commerce é fornecer uma solução de e-commerce completa para a venda de produtos digitais e físicos relacionados a filmes, com uma interface intuitiva e recursos de gerenciamento de carrinho de compras.
+
+## Tecnologias
+
+- **Next.js**: Framework para React que facilita a construção de aplicações React com renderização do lado do servidor e geração de sites estáticos.
+- **React**: Biblioteca para construção de interfaces de usuário.
+- **React Icons**: Biblioteca para ícones.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **TailwindCSS**: Framework CSS para criação de interfaces responsivas e modernas.
+- **ESLint**: Ferramenta para análise de código e manutenção de padrões de código.
+- **PostCSS**: Ferramenta para processamento de CSS.
+
+## Estrutura de Pastas
+
+O projeto está organizado da seguinte forma:
+
+- **`src`**: Contém o código-fonte da aplicação.
+  - **`@types`**: Tipos TypeScript utilizados em todo o projeto.
+  - **`app`**: Componentes e lógica relacionados às páginas e funcionalidades da aplicação.
+  - **`components`**: Componentes reutilizáveis da interface.
+  - **`contexts`**: Contextos React para gerenciamento de estado.
+  - **`errors`**: Manipulação e exibição de erros.
+  - **`hooks`**: Hooks personalizados.
+  - **`pages`**: Páginas da aplicação.
+  - **`services`**: Serviços para comunicação com APIs e outras fontes de dados.
+  - **`utils`**: Funções utilitárias e helpers.
+
+## Scripts
+
+Os scripts disponíveis são:
+
+- **`dev`**: Inicia o servidor de desenvolvimento.
+  ```bash
+  npm run dev
+  ```
+- **`build`**: Cria uma versão de produção da aplicação.
+  ```bash
+  npm run build
+  ```
+- **`start`**: Inicia o servidor de produção.
+  ```bash
+  npm run start
+  ```
+- **`lint`**: Executa a verificação de lint no código.
+  ```bash
+  npm run lint
+  ```
+
+## Instalação
+
+Para começar a usar o projeto, clone o repositório e instale as dependências:
+
+```bash
+git clone <URL-DO-REPOSITORIO>
+cd wemovie-ecommerce
+npm install
+```
+
+## Uso
+
+Para iniciar o ambiente de desenvolvimento, utilize o comando:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A aplicação estará disponível em [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Para criar uma versão de produção, use:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+E inicie o servidor de produção com:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contribuição
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contribuições são bem-vindas! Para contribuir, siga estas etapas:
 
-## Deploy on Vercel
+1. Faça um fork do repositório.
+2. Crie uma branch para sua feature ou correção.
+3. Faça suas alterações e teste.
+4. Envie um pull request com uma descrição clara das mudanças.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Licença
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+---
+
+Sinta-se à vontade para ajustar qualquer seção conforme necessário!

@@ -1,7 +1,6 @@
-import { FunctionComponent } from "react";
 import { CartContent } from "@/components/CartContent";
 
-const Cart: FunctionComponent = () => {
+const Cart = () => {
   return (
     <div className="p-8">
       <CartContent />

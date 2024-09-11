@@ -1,12 +1,10 @@
-"use client";
-import { FunctionComponent } from "react";
-import { useCart } from "@/hooks/useCart";
 import { EmptyState } from "@/components/EmptyState";
 import CartSummary from "./CartSummary";
 import { CartCard } from "./CartCard";
 import { CartCardMobile } from "./CartCardMobile";
+import { useCart } from "@/hooks/useCart";
 
-export const CartContent: FunctionComponent = () => {
+export const CartContent = () => {
   const { cartItems, removeFromCart, updateQuantity } = useCart();
 
   if (cartItems.length === 0) {

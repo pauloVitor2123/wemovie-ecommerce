@@ -1,5 +1,4 @@
 import { useCart } from "@/hooks/useCart";
-
 import Image from "next/image";
 
 type HeaderProps = {
