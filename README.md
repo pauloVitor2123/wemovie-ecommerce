@@ -76,7 +76,7 @@ Para iniciar o ambiente de desenvolvimento, utilize o comando:
 npm run dev
 ```
 
-A aplicação estará disponível em [http://localhost:3000](http://localhost:3000).
+A aplicação estará disponível em [https://wemovie-ecommerce.com/](https://wemovie-ecommerce-git-main-paulovitor2123s-projects.vercel.app/)
 
 Para criar uma versão de produção, use:
 
@@ -103,7 +103,7 @@ Contribuições são bem-vindas! Para contribuir, siga estas etapas:
 
 Confira uma demonstração do WeMovie E-Commerce:
 
-[![Assista ao vídeo](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://github.com/pauloVitor2123/wemovie-ecommerce/raw/main/assets/wemovie-ecommerece.mp4)
+### [[Assista ao vídeo]](https://github.com/pauloVitor2123/wemovie-ecommerce/raw/main/assets/wemovie-ecommerece.mp4)
 
 ## Licença
 
