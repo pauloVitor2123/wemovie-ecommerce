@@ -99,9 +99,11 @@ Contribuições são bem-vindas! Para contribuir, siga estas etapas:
 3. Faça suas alterações e teste.
 4. Envie um pull request com uma descrição clara das mudanças.
 
-## Aplicação
+## Demonstração do Projeto
 
-https://github.com/pauloVitor2123/wemovie-ecommerce/blob/main/assets/Teste%20Front%20React%20WeFit%20-%20Google%20Chrome%202024-09-10%2023-37-04.mp4
+Confira uma demonstração do WeMovie E-Commerce:
+
+[![Assista ao vídeo](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://github.com/pauloVitor2123/wemovie-ecommerce/raw/main/assets/wemovie-ecommerece.mp4)
 
 ## Licença
 
