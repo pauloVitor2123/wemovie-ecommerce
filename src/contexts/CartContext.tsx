@@ -1,7 +1,13 @@
 "use client";
 
 import { CartItem } from "@/@types/cart";
-import { createContext, useState, ReactNode, useCallback } from "react";
+import {
+  createContext,
+  useState,
+  ReactNode,
+  useCallback,
+  useEffect,
+} from "react";
 
 interface CartContextType {
   cartItems: CartItem[];
@@ -19,8 +25,28 @@ interface CartProviderProps {
   children: ReactNode;
 }
 
+const CART_STORAGE_KEY = "cartItems";
+
+const getInitialCartItems = (): CartItem[] => {
+  if (typeof window !== "undefined") {
+    const storedCart = localStorage.getItem(CART_STORAGE_KEY);
+    return storedCart ? JSON.parse(storedCart) : [];
+  }
+  return [];
+};
+
+const saveCartToLocalStorage = (cartItems: CartItem[]) => {
+  if (typeof window !== "undefined") {
+    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems));
+  }
+};
+
 export const CartProvider = ({ children }: CartProviderProps) => {
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useState<CartItem[]>(getInitialCartItems);
+
+  useEffect(() => {
+    saveCartToLocalStorage(cartItems);
+  }, [cartItems]);
 
   const addToCart = useCallback((movie: CartItem) => {
     setCartItems((prevItems) => {
