@@ -1,3 +1,4 @@
+"use client";
 import { FunctionComponent } from "react";
 import { useCart } from "@/hooks/useCart";
 import { EmptyState } from "@/components/EmptyState";
@@ -39,7 +40,7 @@ export const CartContent: FunctionComponent = () => {
 
       {cartItems.map((item, index) => (
         <>
-          <div className="hidden md:block">
+          <div className="hidden md:block" key={`first-${index}`}>
             <CartCard
               key={item.id}
               item={item}
@@ -50,7 +51,7 @@ export const CartContent: FunctionComponent = () => {
               removeFromCart={removeFromCart}
             />
           </div>
-          <div className="md:hidden">
+          <div className="md:hidden" key={`second-${index}`}>
             <CartCardMobile
               key={item.id}
               item={item}

@@ -1,9 +1,12 @@
+import { FunctionComponent } from "react";
 import { CartContent } from "@/components/CartContent";
 
-export const Cart = () => {
+const Cart: FunctionComponent = () => {
   return (
     <div className="p-8">
       <CartContent />
     </div>
   );
 };
+
+export default Cart;

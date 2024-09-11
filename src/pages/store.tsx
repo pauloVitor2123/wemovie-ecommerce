@@ -2,9 +2,11 @@
 import { EmptyState } from "@/components/EmptyState";
 import { MovieList } from "@/components/MovieList";
 import { Spinner } from "@/components/Spinner";
+import { MovieProvider } from "@/contexts/MovieContext";
 import { useMovies } from "@/hooks/useMovies";
+import { api } from "@/services/api";
 
-export const Store = () => {
+const StoreCompontent = () => {
   const { movies, loading } = useMovies();
 
   return (
@@ -19,3 +21,13 @@ export const Store = () => {
     </div>
   );
 };
+
+const Store = () => {
+  return (
+    <MovieProvider apiService={api}>
+      <StoreCompontent />
+    </MovieProvider>
+  );
+};
+
+export default Store;

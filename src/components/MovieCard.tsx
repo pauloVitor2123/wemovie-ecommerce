@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { BasicButton } from "./BasicButton";
 import { useCart } from "@/hooks/useCart";
+import { CartButton } from "./CartButton";
 
 export type Movie = {
   id: number;
@@ -45,7 +45,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
           })}
         </b>
       </div>
-      <BasicButton
+      <CartButton
         onClick={handleAddToCart}
         quantity={cartItems.find((m) => m.id === movie.id)?.quantity}
       />

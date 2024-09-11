@@ -13,7 +13,6 @@ const fetchMoviesList = async (): Promise<MoviesResponse> => {
         response.status
       );
     }
-    console.log(data);
     return { movies: data.products };
   } catch (error) {
     throw error;
