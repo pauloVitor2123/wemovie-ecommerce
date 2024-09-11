@@ -12,7 +12,7 @@ const Main = () => {
       <div className="w-full max-w-[1080px]">
         <Header
           goToCart={() => setIsStorePage(false)}
-          goToMovieList={() => setIsStorePage(true)}
+          goToMovieList={() => window.location.reload()}
         />
         {isStorePage ? <Store /> : <Cart />}
       </div>
