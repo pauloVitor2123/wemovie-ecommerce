@@ -63,7 +63,7 @@ Os scripts disponíveis são:
 Para começar a usar o projeto, clone o repositório e instale as dependências:
 
 ```bash
-git clone <URL-DO-REPOSITORIO>
+git clone https://github.com/pauloVitor2123/wemovie-ecommerce
 cd wemovie-ecommerce
 npm install
 ```
@@ -98,6 +98,10 @@ Contribuições são bem-vindas! Para contribuir, siga estas etapas:
 2. Crie uma branch para sua feature ou correção.
 3. Faça suas alterações e teste.
 4. Envie um pull request com uma descrição clara das mudanças.
+
+## Aplicação
+
+https://github.com/pauloVitor2123/wemovie-ecommerce/blob/main/assets/Teste%20Front%20React%20WeFit%20-%20Google%20Chrome%202024-09-10%2023-37-04.mp4
 
 ## Licença
 
